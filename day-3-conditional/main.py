@@ -50,15 +50,42 @@
 #     print(f"Your BMI is {bmi}, you are clinically obese.")
 
 # Exercise Leap Year
-year = int(input("Which year do you want to check? "))
+# year = int(input("Which year do you want to check? "))
+#
+# if year % 4 == 0:
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             print("Leap year.")
+#         else:
+#             print("Not leap year.")
+#     else:
+#         print("Leap year.")
+# else:
+#     print("Not leap year")
+#
+# Multiple if statements
+print("Welcome to the rollercoaster!")
+height = int(input("what is your height in cm? "))
+bill = 0
 
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("Leap year.")
-        else:
-            print("Not leap year.")
+if height >= 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age? "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickets are $7.")
     else:
-        print("Leap year.")
+        bill = 12
+        print("Adult tickets are $12.")
+
+    wants_photo = input("Do you want a phot taken? Y to Yes or N to no. ")
+    if wants_photo == "Y":
+        bill += 3
+
+    print(f"Your final bill is {bill}")
+
 else:
-    print("Not leap year")
+    print("Sorry, you have to grow taller before you can ride.")
