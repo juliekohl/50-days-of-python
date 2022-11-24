@@ -27,15 +27,30 @@
 # print(average_height)
 
 # High Score
-student_scores = input("Input a list of student scores ").split()
-for n in range(0, len(student_scores)):
-    student_scores[n] = int(student_scores[n])
-print(student_scores)
+# student_scores = input("Input a list of student scores ").split()
+# for n in range(0, len(student_scores)):
+#     student_scores[n] = int(student_scores[n])
+# print(student_scores)
+#
+# highest_score = 0
+# for score in student_scores:
+#     if score > highest_score:
+#         highest_score = score
+#         # print(highest_score)
+#
+# print(f"The highest score in the class is: {highest_score}")
 
-highest_score = 0
-for score in student_scores:
-    if score > highest_score:
-        highest_score = score
-        # print(highest_score)
+# Range()
+# for number in range(1, 10):
+#     print(number) # print 1 - 9
+#
+# for number in range(1, 11):
+#     print(number) # print 1 - 10
 
-print(f"The highest score in the class is: {highest_score}")
+# for number in range(1, 11, 3):
+#     print(number) # print 1 4 7 10
+
+total = 0
+for number in range(1, 101):
+    total += number
+print(total) # print 5050
