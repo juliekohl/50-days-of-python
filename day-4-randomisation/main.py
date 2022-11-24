@@ -9,6 +9,7 @@
 #
 # love_score = random.randint(1, 100)
 # print(f"Your love score is {love_score}")
+import random
 
 # Exercise Heads or Tails
 # random_side = random.randint(0, 1)
@@ -78,17 +79,70 @@
 # print(dirty_dozen[1][3]) # Celery
 
 # Treasure Map
-row1 = ["⬜️","️⬜️","️⬜️"]
-row2 = ["⬜️","⬜️","️⬜️"]
-row3 = ["⬜️️","⬜️️","⬜️️"]
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
+# row1 = ["⬜️","️⬜️","️⬜️"]
+# row2 = ["⬜️","⬜️","️⬜️"]
+# row3 = ["⬜️️","⬜️️","⬜️️"]
+# map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}")
+#
+# position = input("Where do you want to put the treasure? ")
+#
+# row = int(position[0])
+# col = int(position[1])
+#
+# map[col - 1][row - 1] = "X"
+#
+# print(f"{row1}\n{row2}\n{row3}")
 
-position = input("Where do you want to put the treasure? ")
+# Project 4 - Rock Paper Scissors
+import random
 
-row = int(position[0])
-col = int(position[1])
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-map[col - 1][row - 1] = "X"
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-print(f"{row1}\n{row2}\n{row3}")
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game_images = [rock, paper, scissors]
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+print(game_images[user_choice])
+
+computer_choice = random.randint(0, 2)
+print("Computer chose:")
+print(game_images[computer_choice])
+
+if user_choice >= 3 or user_choice < 0:
+  print("You typed an invalid number, you lose!")
+elif user_choice == 0 and computer_choice == 2:
+  print("You win!")
+elif computer_choice == 0 and user_choice == 2:
+  print("You lose")
+elif computer_choice > user_choice:
+  print("You lose")
+elif user_choice > computer_choice:
+  print("You win!")
+elif computer_choice == user_choice:
+  print("It's a draw")
+  
