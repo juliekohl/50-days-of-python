@@ -53,17 +53,27 @@
 # dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears",
 # "Tomatoes", "Celery", "Potatoes"]
 
-fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
-vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# print(fruits[-5]) # Apples
+# fruits[-1] = "Melons" # remove -1 and add "Melons"
+# fruits.append("Lemons") # add "Lemons"
+# print(fruits) # remove "Pears" and add "Melons" and "Lemons"
 
-print(fruits[6]) # Pears
-# print(fruits[7]) # error
-
-len_fruits = len(fruits)
-print(len_fruits) # 7
-# print(fruits[len_fruits]) # error
-print(fruits[len_fruits - 1]) # Pears
-
-dirty_dozen = [fruits, vegetables]
-
-print(dirty_dozen)
+# vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+#
+# print(fruits[6]) # Pears
+# # print(fruits[7]) # error
+#
+# len_fruits = len(fruits)
+# print(len_fruits) # 7
+# # print(fruits[len_fruits]) # error
+# print(fruits[len_fruits - 1]) # Pears
+#
+# dirty_dozen = [fruits, vegetables]
+# print(dirty_dozen)
+# print(dirty_dozen[1][1]) # "Kale"
+# print(dirty_dozen[0]) # fruits only
+# print(dirty_dozen[1]) # vegetables only
+# print(dirty_dozen[1][2]) # Tomatoes
+# print(dirty_dozen[1][3]) # Celery
+#
