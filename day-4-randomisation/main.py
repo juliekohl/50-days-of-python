@@ -26,23 +26,44 @@
 # states_of_america[3] = "Georgya"
 # print(states_of_america[3]) # Georgya
 #
-# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears",
+# "Tomatoes", "Celery", "Potatoes"]
 #
 # states_of_america.extend(dirty_dozen)
 # print(states_of_america)
 
 # Exercise Banker Roulette
-import random
+# import random
+#
+# # Split string method
+# names_string = input("Give me everybody's names, separated by a comma. ")
+# names = names_string.split(", ")
+#
+# # Get the total number of items in list.
+# num_items = len(names)
+# # Generate random numbers between 0 and the last index.
+# random_choice = random.randint(0, num_items - 1)
+# # Pick out random person from list of names using the random number.
+# person_who_will_pay = names[random_choice]
+#
+# print(person_who_will_pay + " is going to buy the meal today!")
 
-# Split string method
-names_string = input("Give me everybody's names, separated by a comma. ")
-names = names_string.split(", ")
+# Index Errors and Nested lists
 
-#Get the total number of items in list.
-num_items = len(names)
-#Generate random numbers between 0 and the last index.
-random_choice = random.randint(0, num_items - 1)
-#Pick out random person from list of names using the random number.
-person_who_will_pay = names[random_choice]
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears",
+# "Tomatoes", "Celery", "Potatoes"]
 
-print(person_who_will_pay + " is going to buy the meal today!")
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+print(fruits[6]) # Pears
+# print(fruits[7]) # error
+
+len_fruits = len(fruits)
+print(len_fruits) # 7
+# print(fruits[len_fruits]) # error
+print(fruits[len_fruits - 1]) # Pears
+
+dirty_dozen = [fruits, vegetables]
+
+print(dirty_dozen)
