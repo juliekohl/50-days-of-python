@@ -56,10 +56,10 @@
 # print(total) # print 5050
 
 # Add even numbers
-even_sum = 0
-for number in range(2, 101, 2):
-    even_sum += number
-print(even_sum) # 2550
+# even_sum = 0
+# for number in range(2, 101, 2):
+#     even_sum += number
+# print(even_sum) # 2550
 
 # or
 
@@ -68,3 +68,14 @@ print(even_sum) # 2550
 #   if number % 2 == 0:
 #     total += number
 # print(total) # 2550
+
+# FizzBuzz
+for number in range(1, 101):
+  if number % 3 == 0 and number % 5 == 0:
+    print("FizzBuzz")
+  elif number % 3 == 0:
+    print("Fizz")
+  elif number % 5 == 0:
+    print("Buzz")
+  else:
+    print(number)
