@@ -30,6 +30,27 @@
 #     print(number_of_hurdles)
 
 # Hurdles with while loops
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+#
+# def jump():
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+#
+# while not at_goal():
+#     if wall_in_front():
+#         jump()
+#     else:
+#         move()
+
+# Jumping over Hurdles with Variable
 def turn_right():
     turn_left()
     turn_left()
@@ -37,11 +58,13 @@ def turn_right():
 
 def jump():
     turn_left()
-    move()
+    while wall_on_right():
+        move()
     turn_right()
     move()
     turn_right()
-    move()
+    while front_is_clear():
+        move()
     turn_left()
 
 while not at_goal():
