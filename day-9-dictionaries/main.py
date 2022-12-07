@@ -63,7 +63,7 @@ from art import logo
 #   "France": "Paris",
 #   "Germany": "Berlin",
 # }
-# print(capitals["France"]) # Paris return valu
+# print(capitals["France"]) # Paris return value
 
 # Nesting a List in a Dictionary
 # travel_log: Dict[str, Any] = {
