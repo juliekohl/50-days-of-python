@@ -1,15 +1,16 @@
 import random
-from typing import Dict
+from typing import List
 from replit import clear
 from art import logo
 
+
 def deal_card() -> int:
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    card = random.choice(cards)
+    cards: List[int] = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    card: int = random.choice(cards)
     return card
 
 
-def calculate_score(cards) -> int:
+def calculate_score(cards: List[int]) -> int:
     if sum(cards) == 21 and len(cards) == 2:
         return 0
 
@@ -19,10 +20,9 @@ def calculate_score(cards) -> int:
     return sum(cards)
 
 
-def compare(user_score, computer_score):
+def compare(user_score: int, computer_score: int) -> str:
     if user_score > 21 and computer_score > 21:
         return "You went over. You lose 😤"
-
 
     if user_score == computer_score:
         return "Draw 🙃"
@@ -39,17 +39,17 @@ def compare(user_score, computer_score):
     else:
         return "You lose 😤"
 
-def play_game():
+
+def play_game() -> None:
     print(logo)
 
-    user_cards = []
-    computer_cards = []
-    is_game_over = False
+    user_cards: List[int] = []
+    computer_cards: List[int] = []
+    is_game_over: bool = False
 
     for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append((deal_card()))
-
 
     while not is_game_over:
         user_score = calculate_score(user_cards)
@@ -60,7 +60,7 @@ def play_game():
         if user_score == 0 or computer_score == 0 or user_score > 21:
             is_game_over = True
         else:
-            user_should_deal = input("Type 'y' to get another card, or type 'n' to pass: ")
+            user_should_deal: str = input("Type 'y' to get another card, or type 'n' to pass: ")
             if user_should_deal == "y":
                 user_cards.append(deal_card())
             else:
@@ -76,5 +76,5 @@ def play_game():
 
 
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-  clear()
-  play_game()
+    clear()
+    play_game()
