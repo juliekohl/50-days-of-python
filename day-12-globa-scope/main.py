@@ -13,17 +13,17 @@ from typing import List
 
 # Local Scope
 # def drink_potion() -> None:
-#     potion_strergth: int = 2
-#     print(potion_strergth) # 2
+#     potion_strength: int = 2
+#     print(potion_strength) # 2
 #
 # drink_potion()
-# print(potion_strergth) Error var is not defined
+# print(potion_strength) Error var is not defined
 
 # Global Scope
 # player_health: int = 10
 #
 # def drink_potion() -> None:
-#     potion_strergth: int = 2
+#     potion_strength: int = 2
 #     print(player_health) # 10
 #
 # drink_potion()
@@ -35,23 +35,27 @@ from typing import List
 #
 # def create_enemy() -> None:
 #     enemies: List[str] = ["Skeleton", "Zombie", "Alien"]
-#
 #     if game_level < 5:
 #         new_enemy: str = enemies[0]
+#
 #     print(new_enemy)
 
 
 # print(new_enemy) # error var is not defined
 
 # Modify a Global Variable
-enemies: int = 1
+# enemies: int = 1
+#
+#
+# def increase_enemies() -> int:
+#     print(f"enemies inside function: {enemies}")  # 1
+#     return enemies + 1
+#
+#
+# enemies = increase_enemies()
+# print(f"enemies outside function: {enemies}")  # 2
 
-
-def increase_enemies() -> int:
-    print(f"enemies inside function: {enemies}")  # 1
-    return enemies + 1
-
-
-enemies = increase_enemies()
-print(f"enemies outside function: {enemies}")  # 2
-
+# Constants & Global Scope
+PI = 3.14159
+URL = "https://www.google.com"
+TWITTER_HANDLE = "@julianaCochenski"
