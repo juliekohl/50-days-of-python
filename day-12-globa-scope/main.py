@@ -58,7 +58,7 @@ from typing import List
 # Constants & Global Scope
 # PI = 3.14159
 # URL = "https://www.google.com"
-# TWITTER_HANDLE = "@julianaCochenski"
+# TWITTER_HANDLE = "@JCochenski"
 
 # Quiz
 # 1
