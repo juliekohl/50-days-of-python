@@ -39,13 +39,21 @@ from typing import List
 # print(total_words)
 
 # #Use a Debugger
-def mutate(a_list: List[int]) -> None:
-    b_list: List[int] = []
-    for item in a_list:
-        print(item * 2)
-        new_item: int = item * 2
-        b_list.append(new_item)
-    print(b_list)
+# def mutate(a_list: List[int]) -> None:
+#     b_list: List[int] = []
+#     for item in a_list:
+#         print(item * 2)
+#         new_item: int = item * 2
+#         b_list.append(new_item)
+#     print(b_list)
+#
+#
+# mutate([1, 2, 3, 5, 8, 13])
 
+# Debugging Odd or Even
+number: int = int(input("Which number do you want to check? "))
 
-mutate([1, 2, 3, 5, 8, 13])
+if number % 2 == 0:
+    print("This is an even number.")
+else:
+    print("This is an odd number.")
