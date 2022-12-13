@@ -9,7 +9,6 @@
 # my_function()
 from typing import List
 
-
 # # Reproduce the Bug
 # from random import randint
 # from typing import List
@@ -51,9 +50,24 @@ from typing import List
 # mutate([1, 2, 3, 5, 8, 13])
 
 # Debugging Odd or Even
-number: int = int(input("Which number do you want to check? "))
+# number: int = int(input("Which number do you want to check? "))
+#
+# if number % 2 == 0:
+#     print("This is an even number.")
+# else:
+#     print("This is an odd number.")
 
-if number % 2 == 0:
-    print("This is an even number.")
+# Debugging Leap Year
+year: int = int(input("Which year do you want to check? "))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year.")
+        else:
+            print("Not leap year.")
+    else:
+        print("Leap year.")
 else:
-    print("This is an odd number.")
+    print("Not leap year.")
+
