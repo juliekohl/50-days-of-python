@@ -38,7 +38,7 @@ def is_resource_sufficient(order_ingredients: List[Any]) -> bool:
     """Returns True when order can be made, False if ingredients are insufficient."""
     for item in order_ingredients:
         if order_ingredients[item] > resources[item]:
-            print(f"​Sorry there is not enough {item}.")
+            print(f"Sorry there is not enough {item}.")
             return False
     return True
 
@@ -76,7 +76,7 @@ def make_coffee(drink_name: List[Any], order_ingredients: List[Any]) -> None:
 is_on: bool = True
 
 while is_on:
-    choice: str = input("​What would you like? (espresso/latte/cappuccino): ")
+    choice: str = input("What would you like? (espresso/latte/cappuccino): ")
     if choice == "off":
         is_on = False
     elif choice == "report":
