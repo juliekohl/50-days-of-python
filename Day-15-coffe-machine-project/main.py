@@ -26,7 +26,7 @@ MENU: Union[List[Any], Any] = {
     }
 }
 
-profit: int = 0
+profit: float = 0
 resources: Dict[str, int] = {
     "water": 300,
     "milk": 200,
