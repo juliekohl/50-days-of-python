@@ -69,17 +69,17 @@ game()
 # 3. Ask user for a guess.
 
 # 4. Check if user is correct.
-## 5. Get follower count.
-## 6. If Statement
+## 4.1. Get follower count.
+## 4.2. If Statement
 
-# 7. Feedback.
+# 5. Feedback.
 
-# 8. Score Keeping.
+# 6. Score Keeping.
 
-# 9. Make game repeatable.
+# 7. Make game repeatable.
 
-# 10. Make B become the next A.
+# 8. Make B become the next A.
 
-# 11. Add art.
+# 9. Add art.
 
-# 12. Clear screen between rounds.
+# 10. Clear screen between rounds.
