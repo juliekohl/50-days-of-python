@@ -18,7 +18,7 @@
 
 
 # Pandas
-import pandas
+# import pandas
 
 # data = pandas.read_csv("weather-data.csv")
 # print(data)
@@ -58,19 +58,59 @@ import pandas
 # data.to_csv("new-data.csv") # this will create new file with the data_dict inside!
 
 # Squirrel Count csv
-data = pandas.read_csv("2018-central-park-squirrel-census-squirrel-data.csv")
-grey_squirrels_count: float = len(data[data["Primary Fur Color"] == "Gray"])
-red_squirrels_count: float = len(data[data["Primary Fur Color"] == "Cinnamon"])
-black_squirrels_count: float = len(data[data["Primary Fur Color"] == "Black"])
+# data = pandas.read_csv("2018-central-park-squirrel-census-squirrel-data.csv")
+# grey_squirrels_count: float = len(data[data["Primary Fur Color"] == "Gray"])
+# red_squirrels_count: float = len(data[data["Primary Fur Color"] == "Cinnamon"])
+# black_squirrels_count: float = len(data[data["Primary Fur Color"] == "Black"])
+#
+# print(grey_squirrels_count) # 2473
+# print(red_squirrels_count) # 392
+# print(black_squirrels_count) # 103
+#
+# data_dict = {
+#     "Fur Color": ["Gray", "Cinnamon", "Black"],
+#     "Count": [grey_squirrels_count, red_squirrels_count, black_squirrels_count],
+# }
+#
+# dataframe = pandas.DataFrame(data_dict)
+# dataframe.to_csv("squirrel_count.csv")
 
-print(grey_squirrels_count) # 2473
-print(red_squirrels_count) # 392
-print(black_squirrels_count) # 103
+# U.S States Game
+import turtle
+import pandas
 
-data_dict = {
-    "Fur Color": ["Gray", "Cinnamon", "Black"],
-    "Count": [grey_squirrels_count, red_squirrels_count, black_squirrels_count],
-}
+screen = turtle.Screen()
+screen.title("U.S. States Game")
+image = "blank_states_img.gif"
+screen.addshape(image)
+turtle.shape(image)
 
-dataframe = pandas.DataFrame(data_dict)
-dataframe.to_csv("squirrel_count.csv")
+
+# def get_mouse_click_coor(x: float, y: float) -> None:
+#     print(x, y)
+#
+#
+# turtle.onscreenclick(get_mouse_click_coor) # get coord like this 139,-77
+data = pandas.read_csv("50_states.csv")
+all_states = data.state.to_list()
+guessed_states = []
+
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct", prompt="What's another state's name?").title()
+    if answer_state == "Exit":
+        missing_states = []
+        for state in all_states:
+            if state not in guessed_states:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
+        break
+    if answer_state in all_states:
+        guessed_states.append(answer_state)
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.penup()
+        state_data = data[data.state == answer_state]
+        t.goto(int(state_data.x), int(state_data.y))
+        t.write(answer_state)
+
