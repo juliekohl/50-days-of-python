@@ -3,6 +3,41 @@ from typing import List
 import pandas
 
 # List Comprehension
+# For Loop
+# numbers = [1, 2, 3]
+# new_list = []
+# for n in numbers:
+#     add_1 = n + 1
+#     new_list.append(add_1)
+
+# List Comprehension
+# new_list = [n + 1 for n in numbers]
+
+# String as List
+# name = "Juliana"
+# letters_list = [letter for letter in name]
+
+# Range as List
+# range_list = [n * 2 for n in range(1, 5)]
+
+# Conditional List Comprenhension
+# names = ["Alex", "Beth", "Caroline", "Dave", "Elanor", "Freddie"]
+# short_names = [name for name in names if len(name) < 5]
+#
+# upper_case_names = [name.upper() for name in names if len(name) > 4]
+
+# Dictionary Comprehension
+# import random
+# student_grades = {name: random.randint(1, 100) for name in names}
+# print(student_grades)
+#
+# passed_students = {
+#     student: grade
+#     for (student, grade) in student_grades.items() if grade >= 60
+# }
+# print(passed_students)
+
+
 # numbers: List[int] = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 # squared_numbers: List[int] = [number * number for number in numbers]
 # print(squared_numbers)
@@ -55,10 +90,10 @@ import pandas
 #
 
 # Dictionary Comprehension
-student_dict = {
-    "students": ["Julie", "Angie", "Kelly"],
-    "scores": [87, 85, 88],
-}
+# student_dict = {
+#     "students": ["Julie", "Angie", "Kelly"],
+#     "scores": [87, 85, 88],
+# }
 
 # Loop through dictionaries
 # for (key, value) in student_dict.items():
@@ -82,3 +117,14 @@ student_dict = {
 #     if row.student == "Juliana":
 #         print(row.score)
 
+# NATO Alphabet Project
+# Keyword Method with iterrows()
+# {new_key:new_value for (index, row) in df.iterrows()}
+
+data = pandas.read_csv("nato_phonetic_alphabet.csv")
+phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
+print(phonetic_dict)
+
+word = input("Enter a word: ").upper()
+output_list = [phonetic_dict[letter] for letter in word]
+print(output_list)
