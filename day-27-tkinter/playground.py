@@ -15,12 +15,30 @@ from typing import Dict, Any
 
 
 # **kwargs
-def calculate(n: int, **kwargs: Dict[str, Any]) -> None:
-    # print(type(kwargs)) # class 'dict'
-    print(kwargs) # {'add': 3, 'multiply': 5}
-    n += kwargs["add"]
-    n *= kwargs["multiply"]
-    print(n) # 25
+# def calculate(n: int, **kwargs: Dict[str, Any]) -> None:
+#     # print(type(kwargs)) # class 'dict'
+#     print(kwargs) # {'add': 3, 'multiply': 5}
+#     # for key, value in kwargs.items():
+#     #     print(key)
+#     #     print(value)
+#     n += kwargs["add"]
+#     n *= kwargs["multiply"]
+#     print(n) # 25
+#
+#
+# calculate(2, add=3, multiply=5)
+
+# How to use a **kwargs dictionary safely
+class Car:
+    def __init__(self, **kw: Dict[str, str]) -> None:
+        self.make = kw.get("make")
+        self.model = kw.get("model")
+        self.colour = kw.get("color")
+        self.seats = kw.get("seats")
 
 
-calculate(2, add=3, multiply=5)
+my_car = Car(make="Nissan", model="Skyline")
+print(my_car.model)
+print(my_car.make)
+print(my_car.color)
+
