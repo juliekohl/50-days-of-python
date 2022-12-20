@@ -15,13 +15,30 @@
 #     raise TypeError("This is an error that I made up.")
 
 
+# RaiseError
 # BMI Example
-height = float(input("Height: "))
-weight = int(input("Weight: "))
+# height = float(input("Height: "))
+# weight = int(input("Weight: "))
+#
+# if height > 3:
+#     raise ValueError("Human Height should not be over 3 meters.")
+#
+# bmi = weight / height ** 2
+# print(bmi)
 
-if height > 3:
-    raise ValueError("Human Height should not be over 3 meters.")
+# IndexError
+from typing import Any
 
-bmi = weight / height ** 2
-print(bmi)
+fruits = ["Apple", "Pear", "Orange"]
 
+
+def make_pie(index: Any) -> None:
+    try:
+        fruit = fruits[index]
+    except IndexError:
+        print("Fruit pie")
+    else:
+        print(fruit + " pie")
+
+
+make_pie(4)
