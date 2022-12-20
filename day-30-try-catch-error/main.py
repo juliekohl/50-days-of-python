@@ -27,18 +27,38 @@
 # print(bmi)
 
 # IndexError
-from typing import Any
+# from typing import Any
+#
+# fruits = ["Apple", "Pear", "Orange"]
+#
+#
+# def make_pie(index: Any) -> None:
+#     try:
+#         fruit = fruits[index]
+#     except IndexError:
+#         print("Fruit pie")
+#     else:
+#         print(fruit + " pie")
+#
+#
+# make_pie(4)
 
-fruits = ["Apple", "Pear", "Orange"]
+# KeyError
+facebook_posts = [
+    {'Likes': 21, 'Comments': 2},
+    {'Likes': 13, 'Comments': 2, 'Shares': 1},
+    {'Likes': 33, 'Comments': 8, 'Shares': 3},
+    {'Comments': 4, 'Shares': 2},
+    {'Comments': 1, 'Shares': 1},
+    {'Likes': 19, 'Comments': 3}
+]
 
+total_likes = 0
 
-def make_pie(index: Any) -> None:
+for post in facebook_posts:
     try:
-        fruit = fruits[index]
-    except IndexError:
-        print("Fruit pie")
-    else:
-        print(fruit + " pie")
+        total_likes = total_likes + post['Likes']
+    except KeyError:
+        pass
 
-
-make_pie(4)
+print(total_likes)
