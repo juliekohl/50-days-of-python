@@ -1,5 +1,4 @@
 from tkinter import *
-from typing import Any
 
 
 def button_clicker() -> None:
@@ -13,13 +12,12 @@ window = Tk()
 window.title("My First GUI Program")
 # window['background'] = 'blue'
 window.minsize(width=500, height=300)
-window.config(background='blue')
-window.config(padx=100, pady=200)
+window.config(padx=100, pady=200, bg='blue')
 
 # Label
 my_label = Label(text="I am a Label", font=("Arial", 25, "bold"))
 my_label["text"] = "My new Text"
-my_label.config(text="My new Text")
+my_label.config(text="My new Text", fg="white")
 my_label.grid(column=0, row=0)
 my_label.config(padx=50, pady=50)
 
